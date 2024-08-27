@@ -1,3 +1,6 @@
+var logar = document.querySelector("#logar")
+
+
 function sidebarButton(x) {
     let menuSidebar = document.getElementById("sidebar");
     x.classList.toggle("change");
@@ -37,11 +40,13 @@ function showModal() {
         modal2.style.display = "block";
         fade.classList.add("show");
         document.body.style.overflow = "hidden";
+        openModalButton.style.display = "none";
     } else {
         modal.classList.remove("show");
         modal2.style.display = "none";
         fade.classList.remove("show");
         document.body.style.overflow = "visible";
+        openModalButton.style.display = "block";
     }
 }
 
@@ -51,6 +56,10 @@ function closeModal() {
         modal2.style.display = "none";
         fade.classList.remove("show");
         document.body.style.overflow = "visible";
+        openModalButton.style.display = "block";
     }
 }
 
+function logou() {
+    history.pushState(null, null, '../controle_vendas.html');
+}
